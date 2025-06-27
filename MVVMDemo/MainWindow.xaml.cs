@@ -48,7 +48,15 @@ namespace MVVMDemo
             System.Windows.Data.CollectionViewSource customerViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customerViewSource")));
             // 必要に応じて、CollectionViewSourceを設定する
             customerViewSource.Source = vm.Customers;
+            //新規ボタンの登録
+            this.btnNew.Click += delegate
+            {
+                Customer newCustomer = new Customer();
+                vm.NewCustomer(newCustomer);
+                this.ClientDataGrid.SelectedItem = newCustomer;
+            };
         }
+
 
     }
 }

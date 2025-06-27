@@ -63,7 +63,7 @@
             <Label Grid.Column="0" Content="州:" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="10" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             <TextBox x:Name="regionTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="10" Text="{Binding Region, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" Grid.ColumnSpan="2"/>
             <DataGrid x:Name="ClientDataGrid" Grid.Row="10" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="4" Margin="0,31,-463,0" Height="176" VerticalAlignment="Top" ItemsSource="{Binding Mode=OneWay}" DataContext="{Binding Mode=OneWay}"/>
-            <Button x:Name="btnNew" Grid.Column="1" Content="新規" HorizontalAlignment="Left" Margin="5,221,0,0" Grid.Row="10" VerticalAlignment="Top" Width="108" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnNew" Grid.Column="1" Content="新規" HorizontalAlignment="Left" Margin="5,221,0,0" Grid.Row="10" Width="108" Grid.ColumnSpan="2"/>
             <Button x:Name="btnDelete" Grid.Column="2" Content="削除" HorizontalAlignment="Left" Margin="43,221,0,0" Grid.Row="10" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.218,-0.224" Grid.ColumnSpan="2"/>
             <Button x:Name="btnSave" Grid.Column="3" Content="保存" HorizontalAlignment="Left" Margin="68,221,0,0" Grid.Row="10" VerticalAlignment="Top" Width="108"/>
 
