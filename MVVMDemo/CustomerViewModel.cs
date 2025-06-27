@@ -24,11 +24,28 @@ namespace MVVMDemo
 
         public void Dispose() { /* 既存のコード */ }
         public void DeleteCustomer(Customer customer) { /* 既存のコード */ }
-        public void NewCustomer(Customer customer) { /* 既存のコード */ }
+        public void NewCustomer(Customer customer) 
+        {
+            try
+            {
+                _db.Customers.Add(customer);
+                Customers.Add(customer);
+                SaveChanges();
+                OnPropertyChanged(nameof(Customers)); // メソッド名を変更
+            }
+            catch (Exception ex)
+            {
+                // ログ出力やエラーメッセージ表示など
+            }
+        }
         public void UpdateCustomer(Customer customer) { /* 既存のコード */ }
         public void SaveChanges() { /* 既存のコード */ }
         protected virtual void Dispose(bool disposing) { /* 既存のコード */ }
         public void INotifyPropertyChanged(string propertyName) { /* 既存のコード */ }
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         public event PropertyChangedEventHandler PropertyChanged;
     }      
 }
