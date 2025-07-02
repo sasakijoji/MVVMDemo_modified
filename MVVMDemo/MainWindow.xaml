@@ -42,7 +42,7 @@
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Content="住所:" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             <TextBox x:Name="addressTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" VerticalAlignment="Center" Width="296" Grid.ColumnSpan="2">
-                <Binding x:Name="binding" Mode="TwoWay" NotifyOnValidationError="true" Path="Address" ValidatesOnExceptions="true"/>
+                <Binding  x:Name="binding" Mode="TwoWay" NotifyOnValidationError="true" Path="Address" ValidatesOnExceptions="true" UpdateSourceTrigger="Default"/>
             </TextBox>
             <Label Grid.Column="0" Content="市:" HorizontalAlignment="Left" Margin="3,0,0,0" Grid.Row="1" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             <TextBox x:Name="cityTextBox" Grid.Column="2" HorizontalAlignment="Left" Height="NaN" Margin="3,0,0,0" Grid.Row="1" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" Grid.ColumnSpan="2"/>
