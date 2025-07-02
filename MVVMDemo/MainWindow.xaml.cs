@@ -51,9 +51,16 @@ namespace MVVMDemo
             //新規ボタンの登録
             this.btnNew.Click += delegate
             {
+               
+                // 新しいCustomerオブジェクトを作成し、ViewModelに追加
                 Customer newCustomer = new Customer();
                 vm.NewCustomer(newCustomer);
                 this.ClientDataGrid.SelectedItem = newCustomer;
+            };
+            //登録ボタンの登録
+            this.btnSave.Click += delegate
+            {
+                vm.SaveChanges();
             };
         }
 
