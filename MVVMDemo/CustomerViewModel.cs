@@ -9,7 +9,8 @@ using System.Collections.ObjectModel;
 
 namespace MVVMDemo
 {
-    public class CustomerViewModel : IDisposable
+    //public class CustomerViewModel : IDisposable
+    public class CustomerViewModel : INotifyPropertyChanged
     {
         private NorthwindEntities _db;
         private bool _disposed;
@@ -33,7 +34,7 @@ namespace MVVMDemo
             }
         }
 
-
+   
 
 
         // 修正: LoadCustomersAsync メソッドのアクセス修飾子を 'private' から 'public' に変更  
@@ -70,6 +71,8 @@ namespace MVVMDemo
             }
         }
         protected virtual void Dispose(bool disposing) { /* 既存のコード */ }
+
+
         public void INotifyPropertyChanged(string propertyName) 
         {
             
